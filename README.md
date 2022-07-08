@@ -116,7 +116,7 @@ Finally, make sure your DNS settings have propogated correctly.
 * [DNS Propogation Checker](https://dnschecker.org/)
 
 ## Categorization and Blacklist Checking Resources
-* [McAfee](https://trustedsource.org/en/feedback/url?action=checksingle)
+* [McAfee](https://sitelookup.mcafee.com/)
 * [Fortiguard](http://www.fortiguard.com/iprep)
 * [Symantec + BlueCoat](http://sitereview.bluecoat.com/sitereview.jsp)
 * [Checkpoint (requires free account)](https://www.checkpoint.com/urlcat/main.htm)
@@ -263,7 +263,7 @@ socat can be used to redirect incoming DNS packets on port 53 to our team server
 Edit 4/21/2017: 
 The following socat command seems to work well thanks to testing from @xorrior:
 ```
-socat udp4-recvfrom:53,reuseaddr,fork udp4-sendto:<IPADDRESS>; echo -ne
+socat udp4-recvfrom:53,reuseaddr,fork udp4-sendto:<IPADDRESS>:<DNS Listener Port>; echo -ne
 ```
 
 [Redirecting Cobalt Strike DNS Beacons - Steve Borosh](https://medium.com/rvrsh3ll/redirecting-cobalt-strike-dns-beacons-e3dcdb5a8b9b)
@@ -570,7 +570,7 @@ Here are some of those resoources:
 
 * [Responsible Red Teams - Tim MalcomVetter (@malcomvetter)](https://medium.com/@malcomvetter/responsible-red-teams-1c6209fd43cc)
 * [Safe Red Team Infrastructure - Tim MalcomVetter (@malcomvetter)](https://medium.com/@malcomvetter/safe-red-team-infrastructure-c5d6a0f13fac)
-* [Red Team Infrastructure - AWS Encrypted EBS - @_rastamouse](https://rastamouse.me/2018/02/red-team-infrastructure---aws-encrypted-ebs/)
+* [Red Team Infrastructure - AWS Encrypted EBS - @_rastamouse](https://rastamouse.me/blog/encrypted-ebs/)
 * [Attack Infrastructure Logging (4-part series) - Gabriel Mathenge (@_theVIVI)](https://thevivi.net/category/infrastructure/)
 
 # Automating Deployments
